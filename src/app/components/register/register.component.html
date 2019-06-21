@@ -13,7 +13,7 @@
             <div class="form-group has-danger">
                 <label class="" for="email">E-Mail Address</label>
                 <div class="input-group mb-2 mr-sm-2 mb-sm-0">
-                    <input type="text" name="email" class="form-control" id="email"
+                    <input type="text" name="email" class="form-control" id="email" [(ngModel)]="user.email"
                            placeholder="you@example.com" required autofocus>
                 </div>
             </div>
@@ -25,7 +25,7 @@
             <div class="form-group">
                 <label class="" for="password">Password</label>
                 <div class="input-group mb-2 mr-sm-2 mb-sm-0">
-                    <input type="password" name="password" class="form-control" id="password"
+                    <input type="password" name="password" class="form-control" id="password" [(ngModel)]="user.password"
                            placeholder="Password" required>
                 </div>
             </div>
@@ -38,7 +38,7 @@
           <div class="form-group">
               <label class="" for="password">Confirm Password</label>
               <div class="input-group mb-2 mr-sm-2 mb-sm-0">
-                  <input type="password" name="password" class="form-control" id="password"
+                  <input type="password" name="confirmpass" class="form-control" id="confirmpass" [(ngModel)]="user.confirmpass"
                          placeholder=" Confirm Password" required>
               </div>
           </div>
@@ -52,22 +52,22 @@
         <div class="col-md-6" style="padding-top: .35rem">
             <div class="form-check mb-2 mr-sm-2 mb-sm-0">
                 <label class="form-check-label">
-                    <input class="form-check-input" name="remember"
-                           type="checkbox" >
+                    <input class="form-check-input" name="cricket"
+                           type="checkbox"  [(ngModel)]="user.cricket">
                     <span style="padding-bottom: .15rem">Cricket</span>
                 </label>
             </div>
             <div class="form-check mb-2 mr-sm-2 mb-sm-0">
               <label class="form-check-label">
-                  <input class="form-check-input" name="remember"
-                         type="checkbox" >
+                  <input class="form-check-input" name="foodball"
+                         type="checkbox" [(ngModel)]="user.foodball">
                   <span style="padding-bottom: .15rem">Foodball</span>
               </label>
           </div>
           <div class="form-check mb-2 mr-sm-2 mb-sm-0">
             <label class="form-check-label">
-                <input class="form-check-input" name="remember"
-                       type="checkbox" >
+                <input class="form-check-input" name="badminton"
+                       type="checkbox" [(ngModel)]="user.badminton">
                 <span style="padding-bottom: .15rem">Badminton</span>
             </label>
         </div>
@@ -76,7 +76,7 @@
     <div class="row" style="padding-top: 1rem">
         <div class="col-md-3"></div>
         <div class="col-md-6">
-            <button type="submit" class="btn btn-success"><i class="fa fa-sign-in"></i> Sign Up</button>
+            <button type="submit" class="btn btn-success" (click)="register(user)"><i class="fa fa-sign-in"></i> Sign Up</button>
             Existing User?<a href="" routerLink="/">Signin</a>
         </div>   
            

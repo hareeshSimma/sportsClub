@@ -13,7 +13,7 @@
             <div class="form-group has-danger">
                 <label class="" for="email">E-Mail Address</label>
                 <div class="input-group mb-2 mr-sm-2 mb-sm-0">
-                    <input type="text" name="email" class="form-control" id="email"
+                    <input type="text" name="email" class="form-control" id="email" [(ngModel)]="user.email"
                            placeholder="you@example.com" required autofocus>
                 </div>
             </div>
@@ -25,7 +25,7 @@
             <div class="form-group">
                 <label class="" for="password">Password</label>
                 <div class="input-group mb-2 mr-sm-2 mb-sm-0">
-                    <input type="password" name="password" class="form-control" id="password"
+                    <input type="password" name="password" class="form-control" id="password" [(ngModel)]="user.password"
                            placeholder="Password" required>
                 </div>
             </div>
@@ -44,7 +44,7 @@
             <div class="form-check mb-2 mr-sm-2 mb-sm-0">
                 <label class="form-check-label">
                     <input class="form-check-input" name="remember"
-                           type="checkbox" >
+                           type="checkbox"  [(ngModel)]="user.remember">
                     <span style="padding-bottom: .15rem">Remember me</span>
                 </label>
             </div>
@@ -53,7 +53,7 @@
     <div class="row" style="padding-top: 1rem">
         <div class="col-md-3"></div>
         <div class="col-md-6">
-            <button type="submit" class="btn btn-success"><i class="fa fa-sign-in"></i> Login</button>
+            <button type="submit" class="btn btn-success" (click)="authUser(user)"><i class="fa fa-sign-in"></i> Login</button>
             <a class="btn btn-link" href="">Forgot Your Password?</a>
         </div>   
            
